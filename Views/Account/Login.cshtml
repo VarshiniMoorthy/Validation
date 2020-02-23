@@ -1,0 +1,58 @@
+﻿
+@model Account.Entity.Accounts
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2 align="center">Login</h2>
+
+@using (Html.BeginForm("Login", "Account", FormMethod.Get))
+{
+
+
+    <table border="1" align="center">
+        <tr>
+            <td> @Html.LabelFor(model => model.EmailId, new { @class = "col-md-2 control-label" })</td>
+         
+            <td>
+                @Html.TextBoxFor(model => model.EmailId, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.EmailId)
+            </td>
+                @*<td>@Html.LabelFor(Model => Model.EmailId)</td>
+
+            <td>
+                @Html.TextBox("EmailId", null, new { @class = "form-control", data_val = "true", data_val_required = "EmailId is required" })
+                        @Html.ValidationMessage("EmailId", new { @class = "text-danger" })
+                    </td>*@
+        </tr>
+        <tr>
+            <td> @Html.LabelFor(model => model.Password, new { @class = "col-md-2 control-label" })</td>
+
+            <td>
+                @Html.TextBoxFor(model => model.Password, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Password)
+            </td>
+
+            @*<td>@Html.LabelFor(Model => Model.Password)</td>
+        <td>@Html.TextBox("Password", null, new { @class = "form-control", data_val = "true", data_val_required = "Password is required" })
+        @Html.ValidationMessage("Password", new { @class = "text-danger" })
+
+        </td>*@
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" />
+            </td>
+            <td>
+                <input type="button" onclick="" value="SignUp" />
+            </td>
+        </tr>
+    </table>
+    @section Validation
+    {
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    }
+
+}

@@ -1,0 +1,23 @@
+﻿@model Product.Entity.ProductData
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+@using (Html.BeginForm("Create", "Index", FormMethod.Post))
+{
+    <table border="1">
+        <tr>
+            <td>
+                Id :
+            </td>
+            <td>
+                @Html.TextBoxFor(id => Model.ProductId)
+            </td>
+        </tr>
+        <tr></tr>
+    </table>
+
+}

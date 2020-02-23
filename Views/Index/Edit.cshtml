@@ -1,0 +1,32 @@
+﻿@model Product.Entity.ProductData
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+@using (Html.BeginForm("Update", "Index", FormMethod.Post))
+{
+    @Html.HiddenFor(Model => Model.ProductId);
+    <table border="1" cellspacing="30">
+        <tr>
+            <td>Product Name : </td>
+            <td>@Html.TextBoxFor(Model => Model.ProductName)</td>
+        </tr>
+        <tr>
+            <td>Product price : </td>
+            <td>@Html.TextBoxFor(Model => Model.ProductPrice)</td>
+        </tr>
+        <tr>
+            <td>Product quantiy </td>
+            <td>@Html.TextBoxFor(Model => Model.ProductQuantity)</td>
+        </tr>
+      
+        <tr>
+            <td>
+                <input type="submit" value="Update" />
+            </td>
+            <td><a href="/Index">Back</a></td>
+        </tr>
+    </table>
+}

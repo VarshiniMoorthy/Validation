@@ -1,0 +1,126 @@
+﻿
+@model Account.Entity.Accounts
+
+@{
+    ViewBag.Title = "SignUp";
+}
+
+<h2 align="center">SignUp</h2>
+
+
+@using (Html.BeginForm("SignUp", "Account", FormMethod.Post))
+{
+
+    <table border="1" align="center">
+        <tr>
+            <td> @Html.LabelFor(model => model.EmailId, new { @class = "col-md-2 control-label" })</td>
+
+            <td>
+                @Html.TextBoxFor(model => model.EmailId, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.EmailId)
+            </td>
+            @*<td>@Html.LabelFor(Model => Model.EmailId)</td>
+
+        <td>
+            @Html.TextBox("EmailId", null, new { @class = "form-control", data_val = "true", data_val_required = "EmailId is required" })
+            @Html.ValidationMessage("EmailId", new { @class = "text-danger" })
+        </td>*@
+        <tr>
+            <td> @Html.LabelFor(model => model.Password, new { @class = "col-md-2 control-label" })</td>
+
+            <td>
+                @Html.TextBoxFor(model => model.Password, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Password)
+            </td>
+            @*<td>@Html.LabelFor(Model => Model.Password)</td>
+
+        <td>
+            @Html.TextBox("Password", null, new { @class = "form-control", data_val = "true", data_val_required = "Password is required" })
+            @Html.ValidationMessage("Password", new { @class = "text-danger" })
+        </td>*@
+        </tr>
+        <tr>
+            <td> @Html.LabelFor(model => model.Gender, new { @class = "col-md-2 control-label" })</td>
+
+            <td>
+                @Html.TextBoxFor(model => model.Gender, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Gender)
+            </td>
+            @*<td>@Html.LabelFor(Model => Model.Gender)</td>
+
+        <td>
+            @Html.TextBox("Gender", null, new { @class = "form-control", data_val = "true", data_val_required = "Gender is required" })
+            @Html.ValidationMessage("Gender", new { @class = "text-danger" })
+        </td>*@
+        </tr>
+        <tr>
+            <td> @Html.LabelFor(model => model.Age, new { @class = "col-md-2 control-label" })</td>
+
+            <td>
+                @Html.TextBoxFor(model => model.Age, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Age)
+            </td>
+            @*<td>@Html.LabelFor(Model => Model.Age)</td>
+
+        <td>
+            @Html.TextBox("Age", null, new { @class = "form-control", data_val = "true", data_val_required = "Age is required" })
+            @Html.ValidationMessage("Age", new { @class = "text-danger" })
+        </td>*@
+        </tr>
+        <tr>
+            <td> @Html.LabelFor(model => model.City, new { @class = "col-md-2 control-label" })</td>
+
+            <td>
+                @Html.DropDownList("City", new List<SelectListItem>
+               {
+                   new SelectListItem { Text = "Coimbatore", Value= "1"},
+                   new SelectListItem{Text = "Trichy", Value="2"},
+                   new SelectListItem{Text = "selam", Value = "3"}
+                    }, "Select City")
+            </td>
+
+        </tr>
+        <tr>
+            <td> @Html.LabelFor(model => model.PhoneNumber, new { @class = "col-md-2 control-label" })</td>
+
+            <td>
+                @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.PhoneNumber)
+            </td>
+            @*<td>@Html.LabelFor(Model => Model.PhoneNumber)</td>
+
+        <td>
+            @Html.TextBox("PhoneNumber", null, new { @class = "form-control", data_val = "true", data_val_required = "PhoneNumber is required" })
+            @Html.ValidationMessage("PhoneNumber", new { @class = "text-danger" })
+        </td>*@
+        </tr>
+        <tr>
+            <td> @Html.LabelFor(model => model.LanguageKnown, new { @class = "col-md-2 control-label" })</td>
+
+            <td>
+                @Html.TextBoxFor(model => model.LanguageKnown, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.LanguageKnown)
+            </td>
+            @*<td>@Html.LabelFor(Model => Model.LanguageKnown)</td>
+
+        <td>
+            @Html.TextBox("LanguageKnown", null, new { @class = "form-control", data_val = "true", data_val_required = "LanguageKnown is required" })
+            @Html.ValidationMessage("LanguageKnown", new { @class = "text-danger" })
+        </td>*@
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" />
+            </td>
+            <td>
+                <input type="button" onclick="" value="Login" />
+            </td>
+        </tr>
+    </table>
+    @section Validation
+    {
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    }
+
+}

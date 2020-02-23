@@ -1,0 +1,6 @@
+C:\Users\SONY\source\repos\OnlineShopping\Product.Entity\bin\Debug\Product.Entity.dll
+C:\Users\SONY\source\repos\OnlineShopping\Product.Entity\bin\Debug\Product.Entity.pdb
+C:\Users\SONY\source\repos\OnlineShopping\Product.Entity\obj\Debug\Product.Entity.csprojAssemblyReference.cache
+C:\Users\SONY\source\repos\OnlineShopping\Product.Entity\obj\Debug\Product.Entity.csproj.CoreCompileInputs.cache
+C:\Users\SONY\source\repos\OnlineShopping\Product.Entity\obj\Debug\Product.Entity.dll
+C:\Users\SONY\source\repos\OnlineShopping\Product.Entity\obj\Debug\Product.Entity.pdb
